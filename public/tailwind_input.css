@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global styles */
+@font-face {
+  font-family: "Kanit";
+  font-weight: normal;
+  src: url(fonts/Kanit-Regular.ttf) format("truetype");
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-slate-50 p-5 font-kanit;
+  }
+}
+
+@layer components {
+  .logo {
+    will-change: filter;
+    transition: 0.75s;
+  }
+
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #24c8db);
+  }
+}
